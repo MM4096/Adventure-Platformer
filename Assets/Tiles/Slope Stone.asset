@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Slope Stone
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 1925575479, guid: d6224e2b02dc5ba4e8aeb924f4117dfd, type: 3}
+  m_Sprite: {fileID: -235752981, guid: a3f67fac8a1a088409886186c204b2df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
