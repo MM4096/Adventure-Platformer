@@ -155,7 +155,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Standalone: com.mm4096.adventure-platformer
-    WebGL: com.DefaultCompany.Adventure-Platformer
+    WebGL: com.mm4096.adventure-platformer
   buildNumber:
     Standalone: 3
     iPhone: 3
@@ -686,7 +686,7 @@ PlayerSettings:
   webGLPowerPreference: 2
   scriptingDefineSymbols:
     Standalone: BUILD_TYPE_UPDATE;BUILD_PLATFORM_PC;BUILD_ARCH_WINDOWSX86;BUILD_BACKEND_MONO
-    WebGL: 
+    WebGL: BUILD_TYPE_UPDATE;BUILD_PLATFORM_WEBGL;BUILD_ARCH_WEBGL;BUILD_BACKEND_IL2CPP
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:

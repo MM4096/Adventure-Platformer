@@ -27,6 +27,7 @@ public class Achievements : MonoBehaviour
     private Achievement deathAchievement1;
     private Achievement deathAchievement50;
     private Achievement borderAchievement;
+    private Achievement speedrunStart;
     
     public Achievement[] achievements;
     
@@ -39,6 +40,7 @@ public class Achievements : MonoBehaviour
         deathAchievement1 = new Achievement("Touched Lava", "You can die in this game?", AchievementType.Common, false);
         deathAchievement50 = new Achievement("Master of Death", "Die 50 times", AchievementType.Epic, false);
         borderAchievement = new Achievement("That border", "What did you think was here?", AchievementType.Rare, false);
+        speedrunStart = new Achievement("Gotta go fast!", "Speed is of the essence", AchievementType.Common, false);
         achievements = new [] {climbAchievement, collectableAchievement50, collectableAchievement100, deathAchievement50, borderAchievement, deathAchievement1};
     }
 
@@ -81,6 +83,15 @@ public class Achievements : MonoBehaviour
 
         #endregion
     }
+
+    public void SpeedrunStarted()
+    {
+        if (!speedrunStart.unlocked)
+        {
+            ShowAchievement("Gotta go fast!", commonColor);
+            speedrunStart.unlocked = true;
+        }
+    }
     
     private void ShowAchievement(string achievementName, Color color)
     {
@@ -114,6 +125,7 @@ public class Achievements : MonoBehaviour
         }
 
         
+        InstantiateAchievement("Gotta go fast!", commonColor, "Speed is of the essence", speedrunStart.unlocked);
         InstantiateAchievement("Touched Lava", commonColor, "You can die in this game?", deathAchievement1.unlocked);
         InstantiateAchievement("That border", rareColor, "What did you think was here?", borderAchievement.unlocked);
         InstantiateAchievement("Collector", rareColor, "Complete Collected: 50%", collectableAchievement50.unlocked);
@@ -147,5 +159,6 @@ public class Achievements : MonoBehaviour
         deathAchievement50 = _achievements[3];
         borderAchievement = _achievements[4];
         deathAchievement1 = _achievements[5];
+        speedrunStart = _achievements[6];
     }
 }

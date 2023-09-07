@@ -11,6 +11,7 @@ public class Trigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             speedrunController.StartTimer();
+            Achievements.instance.SpeedrunStarted();
         }
     }
 }
